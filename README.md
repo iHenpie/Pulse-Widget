@@ -10,11 +10,11 @@ These screenshots use mock data only.
 
 | Morning | Work |
 | --- | --- |
-| ![Pulse morning widget preview](screenshots/pulse-morning.png) | ![Pulse work widget preview](screenshots/pulse-work.png) |
+| ![Pulse morning widget preview](pulse-morning.jpg) | ![Pulse work widget preview](pulse-work.jpg) |
 
 | Evening | Night |
 | --- | --- |
-| ![Pulse evening widget preview](screenshots/pulse-evening.png) | ![Pulse night widget preview](screenshots/pulse-night.png) |
+| ![Pulse evening widget preview](pulse-evening.jpg) | ![Pulse night widget preview](pulse-night.jpg) |
 
 ## What It Shows
 
@@ -36,12 +36,14 @@ These screenshots use mock data only.
 
 ## Install
 
-1. Open `Pulse_Scriptable.js`.
-2. Copy the full script into Scriptable.
-3. Name the script `Pulse`.
-4. Add a large Scriptable widget to your Home Screen.
-5. Set the widget script to `Pulse`.
-6. Run the script once inside Scriptable to open settings and initial setup.
+1. Download or copy `Pulse_Scriptable.js`.
+2. Open Scriptable.
+3. Create a new script.
+4. Paste in the contents of `Pulse_Scriptable.js`.
+5. Name the script `Pulse`.
+6. Add a large Scriptable widget to your Home Screen.
+7. Set the widget script to `Pulse`.
+8. Run the script once inside Scriptable to open settings and initial setup.
 
 ## Health Sync
 
@@ -49,66 +51,3 @@ Pulse reads health data from:
 
 ```text
 iCloud Drive/Scriptable/pulse-health.json
-```
-
-The companion Shortcut should save JSON like this:
-
-```json
-{
-  "steps": 5106,
-  "move": 335,
-  "moveGoal": 600,
-  "exercise": 8,
-  "exerciseGoal": 30,
-  "updatedAt": 1784563200000
-}
-```
-
-If the file is missing, Pulse shows a friendly Sync Health prompt. Tapping the Health section opens:
-
-```text
-shortcuts://run-shortcut?name=Pulse%20Sync
-```
-
-## Companion Files
-
-Pulse can also read optional files from Scriptable’s iCloud folder:
-
-```text
-pulse-health.json
-pulse-alarm.json
-pulse-commute.json
-```
-
-Examples are included in `examples/`.
-
-## Settings
-
-Run the script in Scriptable to configure:
-
-- Name
-- Home and work locations
-- Work days
-- Calendar and reminder lists
-- Commute settings
-- Preferred transport
-- Background style
-- Fasting schedule
-- Preview mode for each layout
-
-## Current Status
-
-Pulse is a prototype. It works as a Scriptable widget, but it is still evolving. The long-term idea is to turn the concept into a native app with a proper setup flow and widget extension.
-
-## Privacy
-
-Pulse runs locally in Scriptable. It reads local/iCloud files and Apple data that Scriptable is given permission to access. Health data is provided by your own Shortcut through a local JSON file.
-
-Weather and route estimates may use external web requests depending on the feature:
-
-- Open-Meteo for weather
-- OpenStreetMap/Nominatim and OSRM for event location and route estimates
-
-## Not Affiliated
-
-Pulse is not affiliated with Apple, Scriptable, Open-Meteo, OpenStreetMap, or OSRM.
